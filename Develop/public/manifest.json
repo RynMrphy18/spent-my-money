@@ -1,0 +1,49 @@
+{
+    "name": "Budget-Tracker",
+    "icons": [
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        },
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        }, 
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        },
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        }, 
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        },
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        }, 
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        },
+        {
+            "src": "",
+            "sizes": "",
+            "type": ""
+        }
+    ],
+    "theme_color": "",
+    "background_color": "",
+    "start_url": ".",
+    "display": "standalone"
+}
