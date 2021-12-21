@@ -6,7 +6,7 @@ request.onupgradeneeded = function(event) {
 
     const db = event.target.result;
 
-    dbCreateObjectStore('new_transaction', { autoIncrement: true });
+    db.createObjectStore('new_transaction', { autoIncrement: true });
 };
 
 request.onsuccess = function(event) {
