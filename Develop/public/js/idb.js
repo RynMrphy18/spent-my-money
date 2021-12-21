@@ -1,7 +1,10 @@
 let db;
 
+// modeled close to code from module
+
 const request = indexedDB.open('budget_tracker', 1);
 
+// finds actual code attempting to be sent while offline
 request.onupgradeneeded = function(event) {
 
     const db = event.target.result;
@@ -16,6 +19,8 @@ request.onsuccess = function(event) {
 
 }
 
+// saves attempted send in object store
+
 function saveRecord(record) {
 
     const transaction = db.transaction(['new_transaction'], 'readwrite');
@@ -24,6 +29,8 @@ function saveRecord(record) {
 
     budgetObjectStore.add(record);
 }
+
+// posts when it does online
 
 function uploadTransaction() {
 

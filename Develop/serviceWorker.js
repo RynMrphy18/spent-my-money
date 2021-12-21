@@ -2,6 +2,8 @@ const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
+// saves these files if offline
+
 const FILES_TO_CACHE = [
     './public/index.html',
     './public/css/style.css',
@@ -18,6 +20,8 @@ const FILES_TO_CACHE = [
     './public/icons/icon-72x72.png'
 ];
 
+// installs service worker
+
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open(CAHCE_NAME).then(function (cache) {
@@ -26,6 +30,8 @@ self.addEventListener('install', function(e) {
         })
     )
 });
+
+// activates service worker once all previous caches have been deleted
 
 self.addEventListener('activate', function (e) {
     e.waitUntil(
@@ -44,6 +50,8 @@ self.addEventListener('activate', function (e) {
         })
     )
 });
+
+// if resource is not in the data cache it will be fetched online from the given url
 
 self.addEventListener('fetch', function(e) {
     console.log('fetch request : ' + e.request.url);
